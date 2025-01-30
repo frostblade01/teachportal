@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Login - School Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Reset and Global Styles */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            position: relative; /* For footer positioning */
+            overflow: hidden; /* Prevent scrollbars */
+        }
+
+        /* Background Video */
+        .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Send it to the back */
+            object-fit: cover; /* Cover the entire background */
+        }
+
+        /* Login Container */
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            z-index: 1; /* Bring it to the front */
+        }
+
+        h1 {
+            color: #387478;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .logo {
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #243642;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .login-button {
+            display: inline-block; /* Make it behave like a button */
+            width: 100%; /* Full width */
+            padding: 12px; /* Padding for the button */
+            background-color: #387478; /* Button color */
+            color: #FFF; /* Text color */
+            text-align: center; /* Center the text */
+            border-radius: 5px; /* Rounded corners */
+            text-decoration: none; /* Remove underline */
+            font-size: 16px; /* Font size */
+            font-weight: 600; /* Font weight */
+            transition: background-color 0.3s ease; /* Transition effect */
+            margin-top: 10px; /* Space above the button */
+        }
+
+        .login-button:hover {
+            background-color: #285a5f; /* Darker color on hover */
+        }
+
+        .message {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .message a {
+            color: #387478;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .message a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            position: absolute;
+            bottom: 20px;
+            text-align: center;
+            width: 100%;
+            color: #fff;
+            font-size: 12px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 20px;
+            }
+
+            .login-container {
+                padding: 30px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            input[type="text"],
+            input[type="password"] {
+                padding: 10px;
+            }
+
+            .login-button {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <video class="background-video" autoplay loop muted>
+        <source src="1.mp4" type="video/mp4"> <!-- Replace with your video file -->
+        Your browser does not support the video tag.
+    </video>
+    <div class="login-container">
+        <img src="logo.jpg" alt="School Logo" class="logo" width="100"> <!-- Add your logo image here -->
+        <h1>Teacher Login</h1>
+        <div class="input-group">
+            <label for="teacher-id">Teacher ID</label>
+            <input type="text" id="teacher-id" name="teacher-id" required>
+        </div>
+        <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <a href="home.html" class="login-button">Login</a>
+        <div class="message">
+            <p>Forgot your password? <a href="reset-password.html">Reset it here</a></p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 School Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>
